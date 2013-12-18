@@ -1,0 +1,16 @@
+<!-- edit.ejs -->
+<html>
+  <body>
+    <h1>Editar dados do cliente: <%= cliente.nome %></h1>
+    <form action="/cliente/<%= id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <label>Nome: 
+        <input type="text" name="cliente[nome]" value="<%= cliente.nome %>">
+      </label>
+      <label>Idade: 
+        <input type="text" name="cliente[idade]" value="<%= cliente.idade %>">
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
